@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <img src="/img/logo.png" alt="Logo AMIKOM" class="logo">
+            <form action="login.php" method="POST">
+                <div class="form-group">
+                    <label for="nimNpm">
+                        <img src="/img/icon orang.png" alt="User Icon" class="icon"> 
+                        NIM/NPM
+                    </label>
+                    <input type="text" class="form-control" id="nimNpm" name="nimNpm" placeholder="Enter NIM/NPM" aria-label="NIM/NPM">
+                </div>
+                <div class="form-group">
+                    <label for="password">
+                        <img src="/img/icon gembok.png" alt="Password Icon" class="icon"> 
+                        Password
+                    </label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" aria-label="Password">
+                </div>
+                <div class="button-register">
+                    <button type="button" class="btn btn-warning" onclick="location.href='register.html'">Register</button>
+                </div>
+                <div class="button-login">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
