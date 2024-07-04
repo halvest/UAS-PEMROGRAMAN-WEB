@@ -76,3 +76,219 @@ body {
     color: white;
 }
 
+# DASHBOARD
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #6C1FB6;
+    color: white;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.top-nav h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #8E44AD;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-pic {
+    background-color: #F39C12;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.profile h2 {
+    margin: 10px 0;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-btn, .edit-profile-btn {
+    background-color: #6C1FB6;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.edit-profile-btn {
+    background-color: #F39C12;
+}
+
+.menu button {
+    width: 100%;
+    background-color: #F39C12;
+    border: none;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.logout {
+    width: 100%;
+    background-color: #E74C3C;
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+}
+
+.classroom {
+    flex: 1;
+    background-color: #8E44AD;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.classroom h3 {
+    margin: 0;
+}
+
+.attendance-btn {
+    background-color: #F39C12;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.right-section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.schedule {
+    flex: 1;
+    background-color: #8E44AD;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.materials {
+    display: flex;
+    flex-direction: column;
+}
+
+.material-btn {
+    background-color: #8E44AD;
+    color: white;
+    border: none;
+    padding: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: right;
+    padding: 10px;
+}
+
+.popup-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #8E44AD;
+    color: white;
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+.popup-content {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.close-btn {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+
