@@ -38,10 +38,10 @@
 
 ### Built With
 
-* [![HTML][HTML.com]][https://html.com/l]
-* [![CSS][CSS.com]][https://css.com/]
-* [![Bootstrap][Bootstrap.com]][https://getbootstrap.com/]
-* [![JavaScript][JavaScript.com]][https://www.javascript.com/]
+* [![HTML][HTML.com]][HTML-url]
+* [![CSS][CSS.com]][CSS-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![JavaScript][JavaScript.com]][JavaScript-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
