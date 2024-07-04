@@ -32,7 +32,6 @@
 <!-- ABOUT THE PROJECT -->
 ## TUGAS UAS PEMROGRAMAN WEB
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -44,24 +43,21 @@
 * [![JavaScript][JavaScript.com]][JavaScript-url]
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Hasyim Adani - [@DaniTzy07](https://x.com/DaniTzy07)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [github.com/halvest/UAS-PEMROGRAMAN-WEB](https://github.com/halvest/UAS-PEMROGRAMAN-WEB)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
