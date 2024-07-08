@@ -13,7 +13,6 @@
     Hasyim Adani_5103
     <br />
     <br />
-    <a href="">View Demo</a>
     <a href="https://github.com/halvest/UAS-PEMROGRAMAN-WEB">View Demo</a>
     ·
     <a href="https://github.com/halvest/UAS-PEMROGRAMAN-WEB/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
@@ -31,16 +30,48 @@
 
 <!-- ABOUT THE PROJECT -->
 ## TUGAS UAS PEMROGRAMAN WEB
+<br />
 
-
-
-
-### Built With
-
-* [![HTML][HTML.com]][HTML-url]
-* [![CSS][CSS.com]][CSS-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JavaScript][JavaScript.com]][JavaScript-url]
+##  Screenshoot Hasil
+<br />
+<div>
+<h3 align="center">Halaman Login</h3>
+<div align="center">
+  <a href="https://github.com/halvest/UAS-PEMROGRAMAN-WEB/tree/main/Screenshoot%20Hasil">
+    <img src="Screenshoot Hasil/login.png" alt="Logo" width="768" height="408">
+  </a>
+<br />
+<h3 align="center">Halaman Register</h3>
+<div align="center">
+  <a href="https://github.com/halvest/UAS-PEMROGRAMAN-WEB/tree/main/Screenshoot%20Hasil">
+    <img src="Screenshoot Hasil/register.png" alt="Logo" width="768" height="408">
+  </a>
+<br />
+<h3 align="center">Halaman Dashboard</h3>
+<div align="center">
+  <a href="https://github.com/halvest/UAS-PEMROGRAMAN-WEB/tree/main/Screenshoot%20Hasil">
+    <img src="Screenshoot Hasil/dashboard.png" alt="Logo" width="768" height="408">
+  </a>
+<br />
+<h3 align="center">Halaman Dashboard + Sidebar</h3>
+<div align="center">
+  <a href="https://github.com/halvest/UAS-PEMROGRAMAN-WEB/tree/main/Screenshoot%20Hasil">
+    <img src="Screenshoot Hasil/dashboard&sidebar.png" alt="Logo" width="768" height="408">
+  </a>
+<br />
+<h3 align="center">Halaman Form Tambah Data</h3>
+<div align="center">
+  <a href="https://github.com/halvest/UAS-PEMROGRAMAN-WEB/tree/main/Screenshoot%20Hasil">
+    <img src="Screenshoot Hasil/form_tambah_data.png" alt="Logo" width="768" height="408">
+  </a>
+<br />
+<h3 align="center">Halaman Rekapitulasi Nilai</h3>
+<div align="center">
+  <a href="https://github.com/halvest/UAS-PEMROGRAMAN-WEB/tree/main/Screenshoot%20Hasil">
+    <img src="Screenshoot Hasil/rekapitulasi.png" alt="Logo" width="768" height="408">
+  </a>
+<br />
+</div>
 
 
 
