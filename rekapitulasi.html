@@ -4,45 +4,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rekapitulasi Penilaian Mahasiswa</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #7534FF;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+}
+
+.title-section {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.title-section h1 {
+    margin: 0;
+}
+
+.title-section p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #FFA800;
+    color: white;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-data-btn {
+    background-color: #FA001E;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.download-data-btn {
+    background-color: #FFA800;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.popup-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    border-color: #7534FF;
+    border-right-style: outset;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+.popup-content {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.close-btn {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-pic {
+    background-color: #FFA800;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.profile h2 {
+    margin: 10px 0;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-btn, .edit-profile-btn {
+    background-color: #7534FF;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-btn:hover, .edit-profile-btn:hover {
+    background-color: #7534FF;
+}
+
+.edit-profile-btn {
+    background-color: #FFA800;
+}
+
+.edit-profile-btn:hover {
+    background-color: #E67E22;
+}
+
+.menu button {
+    width: 100%;
+    background-color: #FFA800;
+    border: none;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+    background-color: #E67E22;
+}
+
+.logout {
+    width: 100%;
+    background-color: #FA001E;
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+    background-color: #C0392B;
+}
+
+    </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="main-title">Rekapitulasi Penilaian Mahasiswa</h1>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>NIM</th>
-                            <th>Nama Mahasiswa</th>
-                            <th>Kehadiran</th>
-                            <th>Tugas</th>
-                            <th>Responsi</th>
-                            <th>UTS</th>
-                            <th>UAS</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Add rows here -->
-                    </tbody>
-                </table>
-                <div class="row">
-                    <div class="col-6">
-                        <button class="btn btn-warning btn-block">Edit Manual</button>
-                    </div>
-                    <div class="col-6">
-                        <button class="btn btn-warning btn-block">Upload Data Mahasiswa</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <button class="btn btn-warning btn-block">Simpan</button>
-                    </div>
-                </div>
+    <header>
+        <div class="top-nav">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="title-section">
+                <h1>REKAPITULASI PENILAIAN MAHASISWA</h1>
+                <p>PRODI - TAHUN ANGKATAN</p>
+            </div>
+            <div class="logo">
+                <img src="img\logoamikom.jpg" alt="Logo Amikom">
             </div>
         </div>
+    </header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>NIM</th>
+                    <th>NAMA MAHASISWA</th>
+                    <th>KEHADIRAN</th>
+                    <th>TUGAS</th>
+                    <th>RESPONSI</th>
+                    <th>UTS</th>
+                    <th>UAS</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="footer-buttons">
+            <button class="edit-data-btn">UBAH DATA</button>
+            <button class="download-data-btn">DOWNLOAD DATA</button>
+        </div>
+    <div id="popupMenu" class="popup-menu">
+        <div class="popup-content">
+            <div class="close-btn" onclick="toggleMenu()">×</div>
+            <div class="profile">
+                <div class="profile-pic">
+                    <span>FOTO</span>
+                </div>
+                <h2>NAMA DOSEN</h2>
+                <div class="profile-buttons">
+                    <button class="profile-btn">PROFIL</button>
+                    <button class="edit-profile-btn">UBAH PROFIL</button>
+                </div>
+            </div>
+            <div class="menu">
+                <button>PRESENSI</button>
+                <button>PERKULIAHAN</button>
+                <button>FORM TAMBAH DATA</button>
+                <button>REKAPITULASI NILAI</button>
+            </div>
+            <button class="logout">LOGOUT</button>
+        </div>        
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

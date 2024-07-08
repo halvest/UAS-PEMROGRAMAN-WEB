@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekapitulasi Penilaian Mahasiswa</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #7534FF;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+table input {
+    width: 100%;
+    border: none;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+table input:focus {
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #F39C12;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #E67E22;
+}
+
+.footer {
+    text-align: right;
+    padding: 10px;
+    color: #333;
+}
+
+.popup-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    border-color: #7534FF;
+    border-right-style: outset;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+.popup-content {
+    padding: 20px;
+    border-top-right-radius: 5%;
+    border-color: #7534FF;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.close-btn {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-pic {
+    background-color: #F39C12;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.profile h2 {
+    margin: 10px 0;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-btn, .edit-profile-btn {
+    background-color: #7534FF;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-btn:hover, .edit-profile-btn:hover {
+    background-color: #7534FF;
+}
+
+.edit-profile-btn {
+    background-color: #F39C12;
+}
+
+.edit-profile-btn:hover {
+    background-color: #E67E22;
+}
+
+.menu button {
+    width: 100%;
+    background-color: #F39C12;
+    border: none;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+    background-color: #E67E22;
+}
+
+.logout {
+    width: 100%;
+    background-color: #E74C3C;
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+    background-color: #C0392B;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <h1>REKAPITULASI PENILAIAN MAHASISWA</h1>
+            <div class="logo">
+                <img src="img\logoamikom.jpg" alt="Logo Amikom">
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>NIM</th>
+                    <th>NAMA MAHASISWA</th>
+                    <th>KEHADIRAN</th>
+                    <th>TUGAS</th>
+                    <th>RESPONSI</th>
+                    <th>UTS</th>
+                    <th>UAS</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody">
+            </tbody>
+        </table>
+        <div class="buttons">
+            <button onclick="addRow()">EDIT MANUAL</button>
+            <button onclick="uploadData()">UPLOAD DATA MAHASISWA</button>
+            <button onclick="saveData()">SIMPAN</button>
+        </div>
+    </div>
+    <div id="popupMenu" class="popup-menu">
+        <div class="popup-content">
+            <div class="close-btn" onclick="toggleMenu()">×</div>
+            <div class="profile">
+                <div class="profile-pic">
+                    <span>FOTO</span>
+                </div>
+                <h2>NAMA DOSEN</h2>
+                <div class="profile-buttons">
+                    <button class="profile-btn">PROFIL</button>
+                    <button class="edit-profile-btn">UBAH PROFIL</button>
+                </div>
+            </div>
+            <div class="menu">
+                <button>PRESENSI</button>
+                <button>PERKULIAHAN</button>
+                <button>FORM TAMBAH DATA</button>
+                <button>REKAPITULASI NILAI</button>
+            </div>
+            <button class="logout">LOGOUT</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

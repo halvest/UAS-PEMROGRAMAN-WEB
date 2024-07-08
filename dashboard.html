@@ -5,31 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Dosen</title>
     <style>
-      body {
+        body {
     font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow: hidden;
 }
 
 header {
-    background-color: #6C1FB6;
+    background-color: #7534FF;
     color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-}
-
-.top-nav h1 {
-    margin: 0;
-    flex-grow: 1;
-    text-align: left;
+    width: 100%;
 }
 
 .menu-icon {
@@ -46,113 +44,55 @@ header {
     margin: 2px 0;
 }
 
+header h1 {
+    margin: 0;
+}
+
 .logo img {
     height: 40px;
 }
 
 .container {
-    display: flex;
     flex: 1;
-    overflow: hidden;
-}
-
-.sidebar {
-    width: 25%;
-    background-color: #8E44AD;
-    color: white;
-    padding: 20px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 20px;
+    background-color: white;
 }
 
-.profile {
-    text-align: center;
-}
-
-.profile-pic {
-    background-color: #F39C12;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-}
-
-.profile h2 {
-    margin: 10px 0;
-}
-
-.profile-buttons {
-    display: flex;
-    justify-content: center;
-}
-
-.profile-btn, .edit-profile-btn {
-    background-color: #6C1FB6;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.edit-profile-btn {
-    background-color: #F39C12;
-}
-
-.menu button {
-    width: 100%;
-    background-color: #F39C12;
-    border: none;
-    color: white;
-    padding: 15px;
-    margin: 10px 0;
-    cursor: pointer;
-}
-
-.logout {
-    width: 100%;
-    background-color: #E74C3C;
-    border: none;
-    color: white;
-    padding: 15px;
-    cursor: pointer;
+.welcome-section h2 {
+    margin: 0;
+    color: #333;
 }
 
 .main-content {
     display: flex;
     flex: 1;
-    flex-direction: column;
-    padding: 20px;
-    background-color: white;
 }
 
 .classroom {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: #8E44AD;
+    flex: 2;
+    background-color: #7534FF;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border-radius: 10px;
+    margin-right: 20px;
 }
 
 .classroom h3 {
     margin: 0;
 }
 
+.classroom span {
+    margin: 10px 0;
+}
+
 .attendance-btn {
-    background-color: #F39C12;
+    background-color: #FFA800;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -161,15 +101,15 @@ header {
 }
 
 .right-section {
-    display: flex;
     flex: 1;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .schedule {
     flex: 1;
-    background-color: #8E44AD;
+    background-color: #7534FF;
     color: white;
     padding: 20px;
     margin-bottom: 20px;
@@ -181,7 +121,7 @@ header {
 }
 
 .material-btn {
-    background-color: #8E44AD;
+    background-color: #7534FF;
     color: white;
     border: none;
     padding: 20px;
@@ -192,6 +132,7 @@ header {
 .footer {
     text-align: right;
     padding: 10px;
+    color: #333;
 }
 
 .popup-menu {
@@ -200,6 +141,8 @@ header {
     left: -100%;
     width: 300px;
     height: 100%;
+    border-color: #7534FF;
+    border-right-style: outset;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     z-index: 1000;
@@ -221,6 +164,72 @@ header {
     font-size: 24px;
 }
 
+.profile {
+    text-align: center;
+}
+
+.profile-pic {
+    background-color: #FFA800;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.profile h2 {
+    margin: 10px 0;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-btn, .edit-profile-btn {
+    background-color: #7534FF;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.edit-profile-btn {
+    background-color: #FFA800;
+}
+
+.menu button {
+    width: 100%;
+    background-color: #FFA800;
+    border: none;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background-color: #E67E22;
+}
+
+.logout {
+    width: 100%;
+    background-color: #FA001E;
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: #C0392B;
+}
+
     </style>
 </head>
 <body>
@@ -233,25 +242,29 @@ header {
             </div>
             <h1>DASBOARD DOSEN</h1>
             <div class="logo">
-                <img src="logo.png" alt="Logo Amikom">
+                <img src="img\logoamikom.jpg" alt="Logo Amikom">
             </div>
         </div>
     </header>
+    <div class="container">
+        <div class="welcome-section">
+            <h2>SELAMAT DATANG</h2>
+        </div>
         <div class="main-content">
+            <div class="classroom">
+                <h3>MATA KULIAH</h3>
+                <span>RUANG KELAS</span>
+                <button class="attendance-btn">BUKA PRESENSI</button>
+            </div>
             <div class="right-section">
                 <div class="schedule">
                     <h3>JADWAL PERKULIAHAN HARI INI</h3>
-                    <!-- Add schedule content here -->
                 </div>
                 <div class="materials">
                     <button class="material-btn">MATERI KELAS</button>
                     <button class="material-btn">MATERI KELAS</button>
                     <button class="material-btn">MATERI KELAS</button>
                     <button class="material-btn">MATERI KELAS</button>
-                </div>
-                <div class="classroom">
-                    <h3>RUANG KELAS</h3>
-                    <button class="attendance-btn">BUKA PRESENSI</button>
                 </div>
             </div>
         </div>
